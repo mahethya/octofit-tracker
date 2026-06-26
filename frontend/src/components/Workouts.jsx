@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react'
 
-const getApiBaseUrl = () => {
+const getApiUrl = () => {
   const codespaceName = import.meta.env.VITE_CODESPACE_NAME
   return codespaceName
-    ? `https://${codespaceName}-8000.app.github.dev/api`
-    : 'http://localhost:8000/api'
+    ? `https://${codespaceName}-8000.app.github.dev/api/workouts`
+    : 'http://localhost:8000/api/workouts'
 }
 
 function Workouts() {
@@ -15,7 +15,7 @@ function Workouts() {
   useEffect(() => {
     const fetchWorkouts = async () => {
       try {
-        const response = await fetch(`${getApiBaseUrl()}/workouts`)
+        const response = await fetch(getApiUrl())
         if (!response.ok) {
           throw new Error(`Request failed with status ${response.status}`)
         }
