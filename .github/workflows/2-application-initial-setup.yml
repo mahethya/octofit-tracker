@@ -5,8 +5,8 @@ on:
     branches:
       - "build-octofit-app"
     paths:
-      - "octofit-tracker/frontend/package.json"
-      - "octofit-tracker/backend/package.json"
+      - "frontend/package.json"
+      - "backend/package.json"
 
 permissions:
   contents: read
@@ -64,7 +64,7 @@ jobs:
         continue-on-error: true
         uses: skills/action-keyphrase-checker@v2.0.0
         with:
-          text-file: octofit-tracker/frontend/package.json
+          text-file: frontend/package.json
           keyphrase: '"react": "\^19'
           minimum-occurrences: 1
           case-sensitive: false
@@ -74,7 +74,7 @@ jobs:
         continue-on-error: true
         uses: skills/action-keyphrase-checker@v2.0.0
         with:
-          text-file: octofit-tracker/backend/package.json
+          text-file: backend/package.json
           keyphrase: '"express"'
           minimum-occurrences: 1
           case-sensitive: false
@@ -84,7 +84,7 @@ jobs:
         continue-on-error: true
         uses: skills/action-keyphrase-checker@v2.0.0
         with:
-          text-file: octofit-tracker/backend/package.json
+          text-file: backend/package.json
           keyphrase: '"mongoose"'
           minimum-occurrences: 1
           case-sensitive: false
