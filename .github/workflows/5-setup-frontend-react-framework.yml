@@ -5,7 +5,7 @@ on:
     branches:
       - "build-octofit-app"
     paths:
-      - "octofit-tracker/frontend/**"
+      - "frontend/**"
 
 permissions:
   contents: read
@@ -63,7 +63,7 @@ jobs:
         continue-on-error: true
         uses: skills/action-keyphrase-checker@v2.0.0
         with:
-          text-file: octofit-tracker/frontend/src/components/Activities.jsx
+          text-file: frontend/src/components/Activities.jsx
           keyphrase: '-8000.app.github.dev/api/activities'
           minimum-occurrences: 1
           case-sensitive: false
@@ -73,7 +73,7 @@ jobs:
         continue-on-error: true
         uses: skills/action-keyphrase-checker@v2.0.0
         with:
-          text-file: octofit-tracker/frontend/src/components/Leaderboard.jsx
+          text-file: frontend/src/components/Leaderboard.jsx
           keyphrase: '-8000.app.github.dev/api/leaderboard'
           minimum-occurrences: 1
           case-sensitive: false
@@ -83,7 +83,7 @@ jobs:
         continue-on-error: true
         uses: skills/action-keyphrase-checker@v2.0.0
         with:
-          text-file: octofit-tracker/frontend/src/components/Teams.jsx
+          text-file: frontend/src/components/Teams.jsx
           keyphrase: '-8000.app.github.dev/api/teams'
           minimum-occurrences: 1
           case-sensitive: false
@@ -93,7 +93,7 @@ jobs:
         continue-on-error: true
         uses: skills/action-keyphrase-checker@v2.0.0
         with:
-          text-file: octofit-tracker/frontend/src/components/Users.jsx
+          text-file: frontend/src/components/Users.jsx
           keyphrase: '-8000.app.github.dev/api/users'
           minimum-occurrences: 1
           case-sensitive: false
@@ -103,7 +103,7 @@ jobs:
         continue-on-error: true
         uses: skills/action-keyphrase-checker@v2.0.0
         with:
-          text-file: octofit-tracker/frontend/src/components/Workouts.jsx
+          text-file: frontend/src/components/Workouts.jsx
           keyphrase: '-8000.app.github.dev/api/workouts'
           minimum-occurrences: 1
           case-sensitive: false
