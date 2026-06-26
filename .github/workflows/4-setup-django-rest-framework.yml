@@ -5,7 +5,7 @@ on:
     branches:
       - "build-octofit-app"
     paths:
-      - "octofit-tracker/backend/src/**"
+      - "backend/src/**"
 
 permissions:
   contents: read
